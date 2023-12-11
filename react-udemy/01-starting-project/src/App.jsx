@@ -12,6 +12,7 @@ function App() {
     }
 
     const tabContent = <p>Please select topic</p>;
+
     if (selectedTopic) {
         tabContent = (
             <div id='tab-content'>
