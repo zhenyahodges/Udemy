@@ -11,6 +11,19 @@ function App() {
         setSelectedTopic(selectedBtn);
     }
 
+    const tabContent = <p>Please select topic</p>;
+    if (selectedTopic) {
+        tabContent = (
+            <div id='tab-content'>
+                <h3>{EXAMPLES[selectedTopic].title}</h3>
+                <p>{EXAMPLES[selectedTopic].description}</p>
+                <pre>
+                    <code>{EXAMPLES[selectedTopic].code}</code>
+                </pre>
+            </div>
+        );
+    }
+
     return (
         <div>
             <Header />
@@ -41,7 +54,7 @@ function App() {
                         </TabButton>
                     </menu>
 
-                    {!selectedTopic ? (
+                    {/* {!selectedTopic ? (
                         <p>Please select topic</p>
                     ) : (
                         <div id='tab-content'>
@@ -51,7 +64,8 @@ function App() {
                                 <code>{EXAMPLES[selectedTopic].code}</code>
                             </pre>
                         </div>
-                    )}
+                    )} */}
+                    {tabContent}
                 </section>
             </main>
         </div>
