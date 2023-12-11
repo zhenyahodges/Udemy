@@ -1,7 +1,7 @@
-export default function TabButton(props) {
-    return (
+export default function TabButton({children,onSelect}) {
+     return (
         <li>
-            <button>{props.children}</button>
+            <button onClick={onSelect}>{children}</button>
         </li>
     );
 }
