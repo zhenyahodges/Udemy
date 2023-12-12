@@ -4,7 +4,19 @@ const initialGameBoard = [
     [null, null, null],
 ];
 
-export default function GameBoard({onSelectSquare}) {
+export default function GameBoard({ onSelectSquare, turns }) {
+    //NB deriving state! try to derive as much info and as many values as poss! 
+    // & manage as little state as needed
+    // computed value derived from some state, i.e.game turns in app component
+    let gameBoard = initialGameBoard;
+
+    for (const turn of turns) {
+        const { square, player } = turn;
+        const { row, col } = square;
+
+        gameBoard[row][col] = player;
+    }
+
     // const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
     // function handleSelectSquare(rowIndex, columnIndex) {
@@ -26,10 +38,7 @@ export default function GameBoard({onSelectSquare}) {
                     <ol>
                         {row.map((playerSymbol, columnIndex) => (
                             <li key={columnIndex}>
-                                <button
-                                    onClick={onSelectSquare
-                                    }
-                                >
+                                <button onClick={onSelectSquare}>
                                     {playerSymbol}
                                 </button>
                             </li>
