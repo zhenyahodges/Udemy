@@ -5,7 +5,7 @@ const initialGameBoard = [
 ];
 
 export default function GameBoard({ onSelectSquare, turns }) {
-    //NB deriving state! try to derive as much info and as many values as poss from that state! 
+    //NB deriving state! try to derive as much info and as many values as poss from that state!
     // & manage as little state as needed
     // computed value derived from some state, i.e.game turns in app component
     let gameBoard = initialGameBoard;
@@ -38,7 +38,12 @@ export default function GameBoard({ onSelectSquare, turns }) {
                     <ol>
                         {row.map((playerSymbol, columnIndex) => (
                             <li key={columnIndex}>
-                                <button onClick={()=>onSelectSquare(rowIndex,columnIndex)}>
+                                <button
+                                    onClick={() =>
+                                        onSelectSquare(rowIndex, columnIndex)
+                                    }
+                                    disabled={playerSymbol !== null}
+                                >
                                     {playerSymbol}
                                 </button>
                             </li>
