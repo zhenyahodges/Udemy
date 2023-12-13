@@ -3,6 +3,7 @@ import GameBoard from './components/GameBoard';
 import Player from './components/PLayer';
 import Log from './components/Log';
 
+
 function derivedActivePlayer(gameTurns) {
     let currentPlayer = 'X';
 
@@ -24,8 +25,8 @@ function App() {
         // );
 
         setGameTurns((prevTurns) => {
-           const currentPlayer= derivedActivePlayer(prevTurns);
-           
+            const currentPlayer = derivedActivePlayer(prevTurns);
+
             const updatedTurns = [
                 {
                     square: {
