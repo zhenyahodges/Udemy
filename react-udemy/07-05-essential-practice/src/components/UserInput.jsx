@@ -22,23 +22,43 @@ export default function UserInput() {
             <article className='input-group'>
                 <p>
                     <label>INITIAL INVESTMENT</label>
-                    <input type='number' required></input>
+                    <input
+                        type='number'
+                        required
+                        value={userInput.initialInvestment}
+                        onChange={(e) => handleChange('initialInvestment',e.target.value)}
+                    ></input>
                 </p>
 
                 <p>
                     <label>ANNUAL INVESTMENT</label>
-                    <input type='number' required></input>
+                    <input
+                        type='number'
+                        required
+                        value={userInput.annualInvestment}
+                        onChange={(e) => handleChange('annualInvestment',e.target.value)}
+                    ></input>
                 </p>
             </article>
             <article className='input-group'>
                 <p>
                     <label> EXPECTED RETURN</label>
-                    <input type='number' required></input>
+                    <input
+                        type='number'
+                        required
+                        value={userInput.expectedReturn}
+                        onChange={(e) => handleChange('expectedReturn',e.target.value)}
+                    ></input>
                 </p>
 
                 <p>
                     <label>DURATION</label>
-                    <input type='number' required></input>
+                    <input
+                        type='number'
+                        required
+                        value={userInput.duration}
+                        onChange={(e) => handleChange('duration',e.target.value)}
+                    ></input>
                 </p>
             </article>
         </section>
