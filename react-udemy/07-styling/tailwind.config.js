@@ -2,7 +2,11 @@
 export default {
     content: ['./index.html', './src/**/*.{js,cjs,mjs,ts,jsx,tsx}'],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily:{
+                title: ['"Pacifico"', 'cursive']
+            }
+        },
     },
     plugins: [],
 };
