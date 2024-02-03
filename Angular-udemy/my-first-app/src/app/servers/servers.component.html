@@ -24,12 +24,13 @@
 <!-- property binding -->
 <!-- <p [innerText]="allowNewServer"></p> -->
 
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated"  >Server was created,name is {{serverName}}</p>
 
 <app-server></app-server>
 <app-server></app-server>
 
-<input type="text" class="form-control" 
+<!-- <input type="text" class="form-control" 
 [(ngModel)]="username" />
 
 <button
@@ -40,5 +41,5 @@
   Reset Username
 </button>
 
-<p>{{username}}</p>
+<p>{{username}}</p> -->
 
