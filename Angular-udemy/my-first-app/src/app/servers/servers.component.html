@@ -5,8 +5,7 @@
 
 <!-- directive: -->
 <!-- two-way data binding and reacting to changes -->
-<input type="text" class="form-control" 
-[(ngModel)]="serverName" />
+<input type="text" class="form-control" [(ngModel)]="serverName" />
 
 <!-- <p>{{ serverName }}</p> -->
 
@@ -25,7 +24,12 @@
 <!-- <p [innerText]="allowNewServer"></p> -->
 
 <!-- <p>{{ serverCreationStatus }}</p> -->
-<p *ngIf="serverCreated"  >Server was created,name is {{serverName}}</p>
+<p *ngIf="serverCreated; else noServer">
+  Server was created,name is {{ serverName }}
+</p>
+<ng-template #noServer>
+  <p>No server</p>
+</ng-template>
 
 <app-server></app-server>
 <app-server></app-server>
@@ -42,4 +46,3 @@
 </button>
 
 <p>{{username}}</p> -->
-
