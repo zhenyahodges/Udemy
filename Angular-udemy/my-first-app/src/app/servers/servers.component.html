@@ -1,4 +1,5 @@
-<!-- <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button> -->
+<!-- <button class="btn btn-primary" 
+    [disabled]="!allowNewServer">Add Server</button> -->
 <label>Server Name</label>
 <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" /> -->
 
@@ -27,3 +28,17 @@
 
 <app-server></app-server>
 <app-server></app-server>
+
+<input type="text" class="form-control" 
+[(ngModel)]="username" />
+
+<button
+  class="btn btn-primary"
+  [disabled]="username===''"
+  (click)="username=''"
+>
+  Reset Username
+</button>
+
+<p>{{username}}</p>
+
