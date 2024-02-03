@@ -24,6 +24,8 @@
 <!-- <p [innerText]="allowNewServer"></p> -->
 
 <!-- <p>{{ serverCreationStatus }}</p> -->
+
+<!-- structural directive-ngIf -->
 <p *ngIf="serverCreated; else noServer">
   Server was created,name is {{ serverName }}
 </p>
