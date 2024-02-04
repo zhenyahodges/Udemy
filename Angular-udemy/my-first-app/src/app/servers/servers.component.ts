@@ -14,7 +14,10 @@ export class ServersComponent {
   serverName = 'Test';
   // username = '';
   serverCreated = false;
-  servers = ['Test','Test2'];
+  servers = ['Test', 'Test2'];
+  // displayDetails = false;
+  // count = 0;
+  // clickCoutnsArr = [];
 
   constructor() {
     setTimeout(() => {
@@ -30,6 +33,13 @@ export class ServersComponent {
     this.serverCreationStatus =
       'Server was created! Name is: ' + this.serverName;
   }
+
+  // onDisplayDetails() {
+  //   this.displayDetails = !this.displayDetails;
+  //   this.count++;
+  //   // this.clickCoutnsArr.push(this.count);
+  //   this.clickCoutnsArr.push(new Date());
+  // }
 
   onUpdateServerName(event: any) {
     // this.serverName = (<HTMLInputElement>event.target).value;
