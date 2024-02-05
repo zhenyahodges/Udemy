@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from '../recipes.model';
 
 @Component({
   selector: 'app-recipes-list',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './recipes-list.component.css'
 })
 export class RecipesListComponent {
-  recipes=[];
+  recipes= Recipe[] = [
+    new Recipe('A Test Recipe', 'This is a test', 'https://unsplash.com/photos/sliced-tomatoes-with-ground-pork-iNwCO9ycBlc')
+  ];
+
+  constructor(){
+
+  }
+
+
 }
